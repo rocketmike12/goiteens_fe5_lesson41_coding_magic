@@ -1,0 +1,58 @@
+ul {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+input {
+	border: none;
+	&:focus {
+		outline: none;
+	}
+}
+
+button {
+	border: none;
+	cursor: pointer;
+}
+
+address {
+	font-style: normal;
+}
+
+img {
+	display: block;
+}
+
+textarea {
+	resize: none;
+}
+
+body {
+	font-family: Montserrat Alternates;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	appearance: textfield;
+	-moz-appearance: textfield;
+}
