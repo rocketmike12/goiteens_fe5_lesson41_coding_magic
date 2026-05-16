@@ -1,6 +1,7 @@
 @import "/src/sass/base/base.scss";
 
 .header {
+	height: 80px;
 	padding: 21px 0;
 	& > div {
 		width: 1090px;
@@ -9,6 +10,8 @@
 
 	.logo {
 		margin-right: 81px;
+		width: 93px;
+		height: 39px;
 	}
 
 	&-nav {
@@ -28,7 +31,7 @@
 	}
 
 	&-settings-list {
-        width: 185px;
+		width: 185px;
 
 		@include flex(space-between, center, 51px, _, _);
 
