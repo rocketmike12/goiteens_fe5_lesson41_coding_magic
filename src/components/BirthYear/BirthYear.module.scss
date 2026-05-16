@@ -1,0 +1,91 @@
+@import "../../sass/base/base.scss";
+
+.birth-year-check {
+	padding-top: 36px;
+	padding-bottom: 36px;
+
+	&__container {
+		@include flex(_, center, 36px, _, column);
+	}
+
+	&__title {
+		@include typography(inherit, 400, 16px, center);
+
+		color: $black;
+	}
+
+	&__bottom-wrapper {
+		@include flex(center, center, 202px, _, _);
+	}
+
+	&__input-wrapper {
+		@include flex(center, center, _, _, _);
+
+		border-radius: 20px;
+		box-shadow: 3px 3px 0 0 #00000040;
+
+		overflow: hidden;
+	}
+
+	&__input {
+		width: 180px;
+		height: 35px;
+
+		padding: 10px;
+
+		border: none;
+		outline: none;
+
+		background-color: $input-grey;
+		color: $dgrey;
+
+		@include typography(inherit, 400, 12px, left);
+	}
+
+	&__button {
+		width: 35px;
+		height: 35px;
+
+		border: none;
+
+		background-color: $black;
+
+		cursor: pointer;
+
+		@include flex(center, center, _, _, _);
+
+		&:hover {
+			background-color: rgb(70, 70, 70);
+		}
+	}
+
+	&__button-icon {
+		fill: $white;
+	}
+
+	&__text {
+		width: 230px;
+
+		color: $text-right;
+
+		@include typography(inherit, 400, 12px, right);
+
+		&--error {
+			color: $text-wrong;
+		}
+	}
+}
+
+:global(.dark) {
+	.birth-year-check {
+		&__input-wrapper {
+			box-shadow: 3px 3px 0 0 #4d4d4d;
+		}
+
+		&__button {
+			&:hover {
+				background-color: #747474;
+			}
+		}
+	}
+}
