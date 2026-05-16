@@ -3,5 +3,18 @@
 @import "./reset.scss";
 
 body {
-    font-family: Montserrat Alternates;
+	font-family: Montserrat Alternates;
+
+	color: $fg;
+	background-color: $bg;
+
+    transition: 128ms ease;
+    transition-property: background-color;
+}
+
+:global(.dark) {
+	body {
+		color: $fg-dark;
+		background-color: $bg-dark;
+	}
 }
