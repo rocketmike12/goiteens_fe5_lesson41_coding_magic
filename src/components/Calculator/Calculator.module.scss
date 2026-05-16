@@ -1,0 +1,109 @@
+@import "../../sass/base/base.scss";
+
+.calculator {
+	&__container {
+		padding-top: 36px;
+		padding-bottom: 48px;
+	}
+
+	&__title {
+		padding-bottom: 49px;
+
+		color: $black;
+
+		@include typography(inherit, 400, 16px, center);
+	}
+
+	&__base {
+		@include flex(center, center, 38px, _, _);
+	}
+
+	&__input {
+		width: 135px;
+		height: 35px;
+
+		padding: 10px 20px;
+
+		border: none;
+		border-radius: 20px;
+
+		background-color: $input-grey;
+
+		color: $dgrey;
+
+		box-shadow: 3px 3px 0 0 #00000040;
+
+		outline: none;
+
+		@include typography(inherit, 400, 12px, left);
+	}
+
+	&__operators {
+		width: 62px;
+
+		@include flex(center, center, 10px, wrap, _);
+	}
+
+	&__operator-button,
+	&__equals-button {
+		width: 25px;
+		height: 25px;
+
+		border: none;
+		border-radius: 50%;
+
+		background-color: $black;
+
+		color: $white;
+
+		cursor: pointer;
+
+		box-shadow: 3px 3px 0 0 #00000040;
+
+		transition: background-color 0.3s ease;
+
+		@include typography(inherit, 400, 12px, center);
+
+		&:hover {
+			background-color: rgb(70, 70, 70);
+		}
+	}
+
+	&__result {
+		padding: 10px 20px;
+		min-width: 135px;
+
+		border-radius: 20px;
+
+		background-color: $input-grey;
+
+		color: $dgrey;
+		box-shadow: 3px 3px 0 0 #00000040;
+
+		@include typography(inherit, 400, 12px, left);
+	}
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+
+	margin: 0;
+}
+
+:global(.dark) {
+	.calculator {
+		&__operator-button,
+		&__equals-button {
+			background-color: $lgrey;
+
+			color: $black;
+
+			box-shadow: 3px 3px 0 0 #4d4d4d;
+
+			&:hover {
+				background-color: rgb(128, 128, 128);
+			}
+		}
+	}
+}
