@@ -1,0 +1,23 @@
+@import "/src/sass/base/base.scss";
+
+.line-section {
+	padding: 36px 0;
+
+	position: relative;
+	&::after {
+		content: "";
+		width: 536px;
+		height: 1px;
+		background-color: $fg;
+		position: absolute;
+		bottom: 0;
+		transform: translateX(-50%);
+		left: 50%;
+	}
+}
+
+:global(.dark) {
+	.line-section::after {
+		background-color: $fg-dark;
+	}
+}
