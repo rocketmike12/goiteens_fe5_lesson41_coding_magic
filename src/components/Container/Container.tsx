@@ -1,10 +1,7 @@
-import type { ReactNode } from "react";
+import type { ContainerProps } from "./Container.types";
+
 import styles from "./Container.module.scss";
 
-type Props = {
-	children: ReactNode;
-};
-
-export const Container = function ({ children }: Props) {
+export const Container = function ({ children }: ContainerProps) {
 	return <div className={styles["container"]}>{children}</div>;
 };
