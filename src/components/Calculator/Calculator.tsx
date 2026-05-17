@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState, type ChangeEvent } from "react";
+
+import { CalculatorInput } from "./CalculatorInput/CalculatorInput.tsx";
 
 import styles from "./Calculator.module.scss";
 
@@ -60,15 +62,12 @@ export const Calculator = () => {
 				<h2 className={styles["calculator__title"]}>Калькулятор</h2>
 
 				<div className={styles["calculator__base"]}>
-					<input
-						type="number"
-						placeholder="Enter number"
+					<CalculatorInput
 						value={num1}
-						onChange={(e) => {
+						onChange={(e: ChangeEvent<HTMLInputElement>) => {
 							setNum1(e.currentTarget.value);
 							setResult(`${e.currentTarget.value !== "" ? e.currentTarget.value : "x"} ${operator !== "" ? operator : "o"} ${num2 !== "" ? num2 : "y"}`);
 						}}
-						className={styles["calculator__input"]}
 					/>
 
 					<div className={styles["calculator__operators"]}>
@@ -113,15 +112,12 @@ export const Calculator = () => {
 						</button>
 					</div>
 
-					<input
-						type="number"
-						placeholder="Enter number"
+					<CalculatorInput
 						value={num2}
-						onChange={(e) => {
+						onChange={(e: ChangeEvent<HTMLInputElement>) => {
 							setNum2(e.currentTarget.value);
 							setResult(`${num1 !== "" ? num1 : "x"} ${operator !== "" ? operator : "o"} ${e.currentTarget.value !== "" ? e.currentTarget.value : "y"}`);
 						}}
-						className={styles["calculator__input"]}
 					/>
 
 					<button type="button" onClick={handleCalculate} className={styles["calculator__equals-button"]}>

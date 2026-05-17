@@ -1,0 +1,21 @@
+@import "../../sass/base/base.scss";
+
+.input {
+	width: 135px;
+	height: 35px;
+
+	padding: 10px 20px;
+
+	border: none;
+	border-radius: 20px;
+
+	background-color: $input-grey;
+
+	color: $dgrey;
+
+	box-shadow: 3px 3px 0 0 #00000040;
+
+	outline: none;
+
+	@include typography(inherit, 400, 12px, left);
+}
