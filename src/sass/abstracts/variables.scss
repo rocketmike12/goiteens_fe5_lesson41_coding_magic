@@ -1,11 +1,22 @@
 $bg: #ffffff;
 $bg-dark: #222222;
+$bg-alt: #d9d9d9;
+$bg-alt: #333333;
+
 $fg: #000000;
 $fg-dark: #ffffff;
+
 $text-right: #039900;
 $text-wrong: #990000;
-$white: #ffffff;
-$black: #000000;
-$lgrey: #D9D9D9;
-$dgrey: #7E7E7E;
-$input-grey: #D7D7D7;
+$text-right-dark: #04fa00;
+$text-wrong-dark: #fa0000;
+
+$input-bg: #dddddd;
+$input-fg: #000000;
+$input-shadow: 3px 3px 0 0 #00000040;
+$input-shadow-dark: 3px 3px 0 0 #ffffff95;
+
+$button-bg: #000000;
+$button-fg: #ffffff;
+$button-bg-dark: #ffffff;
+$button-fg-dark: #000000;
