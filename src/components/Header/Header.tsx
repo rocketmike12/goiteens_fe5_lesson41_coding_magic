@@ -2,22 +2,17 @@ import { useState, type ChangeEvent } from "react";
 
 import { Container } from "../Container/Container";
 
-import logoLight from "/src/img/logo-light.svg";
-import logoDark from "/src/img/logo-dark.svg";
+import Logo from "/src/img/logo.svg?react";
 
 import styles from "./Header.module.scss";
 
 export const Header = function () {
-	const [dark, setDark] = useState(false);
-
 	const handleDarkMode = (e: ChangeEvent<HTMLInputElement>) => {
 		console.log(e.currentTarget.value);
 		if (e.currentTarget.checked) {
 			document.documentElement.classList.add("dark");
-			setDark(true);
 		} else {
 			document.documentElement.classList.remove("dark");
-			setDark(false);
 		}
 	};
 
@@ -25,7 +20,7 @@ export const Header = function () {
 		<>
 			<header className={styles["header"]}>
 				<Container>
-					<img src={dark ? logoDark : logoLight} className={styles["logo"]} />
+					<Logo className={styles["logo"]} />
 					<nav className={styles["header-nav"]}>
 						<a className={styles["header-nav-link"]} href="">
 							Інтерактив
