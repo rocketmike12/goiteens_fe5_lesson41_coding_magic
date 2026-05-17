@@ -1,0 +1,58 @@
+@import "/src/sass/base/base.scss";
+
+.button-input {
+	@include flex(center, center, _, _, _);
+
+	border-radius: 20px;
+	box-shadow: $input-shadow;
+
+	overflow: hidden;
+
+	&__input {
+		width: 180px;
+		height: 35px;
+
+		padding: 10px;
+
+		border: none;
+		outline: none;
+
+		background-color: $input-bg;
+		color: $input-fg;
+
+		@include typography(inherit, 400, 12px, left);
+	}
+
+	&__button {
+		width: 35px;
+		height: 35px;
+
+		border: none;
+
+		background-color: $button-bg;
+
+		cursor: pointer;
+
+		@include flex(center, center, _, _, _);
+
+		color: $button-fg;
+
+		&__icon {
+			color: $button-fg;
+		}
+	}
+}
+
+:global(.dark) {
+	.button-input {
+		box-shadow: $input-shadow-dark;
+
+		&__button {
+			background-color: $button-bg-dark;
+
+			&__icon {
+				color: $button-fg-dark;
+			}
+		}
+	}
+}
