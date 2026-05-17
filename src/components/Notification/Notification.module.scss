@@ -1,0 +1,23 @@
+@import "/src/sass/base/base.scss";
+
+.notification {
+	width: 230px;
+
+	color: $text-right;
+
+	@include typography(inherit, 400, 12px, right);
+
+	&--error {
+		color: $text-wrong;
+	}
+}
+
+:global(.dark) {
+	.notification {
+		color: $text-right-dark;
+
+		&--error {
+			color: $text-wrong-dark;
+		}
+	}
+}
