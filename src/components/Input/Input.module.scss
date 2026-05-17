@@ -9,13 +9,19 @@
 	border: none;
 	border-radius: 20px;
 
-	background-color: $input-grey;
+	background-color: $input-bg;
 
-	color: $dgrey;
+	color: $input-fg;
 
-	box-shadow: 3px 3px 0 0 #00000040;
+	box-shadow: $input-shadow;
 
 	outline: none;
 
 	@include typography(inherit, 400, 12px, left);
+}
+
+:global(.dark) {
+	.input {
+		box-shadow: $input-shadow-dark;
+	}
 }
