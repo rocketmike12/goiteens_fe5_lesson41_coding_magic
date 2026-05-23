@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
 export type NotificationProps = {
-	error: boolean;
+	status: "right" | "wrong" | "neutral";
 	children: ReactNode;
 };

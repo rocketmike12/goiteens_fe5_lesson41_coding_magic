@@ -3,21 +3,33 @@
 .notification {
 	width: 230px;
 
-	color: $text-right;
-
 	@include typography(inherit, 400, 12px, right);
 
-	&--error {
+	&--right {
+		color: $text-right;
+	}
+
+	&--wrong {
 		color: $text-wrong;
+	}
+
+	&--neutral {
+		color: $text-neutral;
 	}
 }
 
 :global(.dark) {
 	.notification {
-		color: $text-right-dark;
+		&--right {
+			color: $text-right-dark;
+		}
 
-		&--error {
+		&--wrong {
 			color: $text-wrong-dark;
+		}
+
+		&--neutral {
+			color: $text-neutral-dark;
 		}
 	}
 }

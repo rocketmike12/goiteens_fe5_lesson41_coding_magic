@@ -8,11 +8,10 @@ import { Notification } from "../Notification/Notification";
 import styles from "./BirthYear.module.scss";
 
 export const BirthYear = () => {
-	const [year, setYear] = useState("");
 	const [message, setMessage] = useState("");
 	const [isError, setIsError] = useState(false);
 
-	const isLeap = () => {
+	const isLeap = function (year: string) {
 		const parsedYear = Number(year);
 
 		if (Number.isNaN(parsedYear)) {
@@ -23,9 +22,8 @@ export const BirthYear = () => {
 	};
 
 	const handleSubmit = (value: string) => {
-		setYear(value);
-		setIsError(!isLeap());
-		setMessage(isLeap() ? "Ви народилися у високосний рік!" : "Ви народилися не у високосний рік!");
+		setIsError(!isLeap(value));
+		setMessage(isLeap(value) ? "Ви народилися у високосний рік!" : "Ви народилися не у високосний рік!");
 	};
 
 	return (
@@ -35,7 +33,7 @@ export const BirthYear = () => {
 
 				<div className={styles["birth-year-check__wrapper"]}>
 					<ButtonInput type="number" placeholder="Enter your birth year" onSubmit={handleSubmit} />
-					<Notification error={isError}>{message}</Notification>
+					<Notification status={isError ? "wrong" : "right"}>{message}</Notification>
 				</div>
 			</Container>
 		</LineSection>
