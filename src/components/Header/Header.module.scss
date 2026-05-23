@@ -51,7 +51,7 @@
 				height: 0;
 
 				&:checked + span {
-					background-color: #cccccc;
+					background-color: $input-bg;
 				}
 
 				&:checked + span::before {
@@ -67,7 +67,7 @@
 				left: 0;
 				right: 0;
 				bottom: 0;
-				background-color: #7a7a7a;
+				background-color: $input-bg;
 				transition: 400ms;
 				border-radius: 10px;
 
@@ -78,7 +78,7 @@
 					width: 20px;
 					left: 0;
 					top: 0px;
-					background-color: white;
+					background-color: $fg;
 					transition: 400ms;
 					border-radius: 50%;
 					background-image: url("/src/img/header-slider-light.png");
