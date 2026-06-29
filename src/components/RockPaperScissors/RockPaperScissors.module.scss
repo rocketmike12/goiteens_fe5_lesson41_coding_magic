@@ -1,0 +1,101 @@
+@use "sass:color";
+@import "/src/sass/base/base.scss";
+
+.rps {
+	&__container {
+		@include flex(center, center, 24px, nowrap, column);
+	}
+
+	&__game {
+		@include flex(space-between, center, 24px, nowrap, row);
+		width: 100%;
+		max-width: 800px;
+	}
+
+	&__content {
+		@include flex(center, center, 24px, nowrap, column);
+		flex: 1;
+		padding: 36px 0;
+		text-align: center;
+	}
+
+	&__title {
+		margin-bottom: 12px;
+
+		@include typography(inherit, 400, 16px, center);
+	}
+
+	&__choices {
+		@include flex(center, center, 76px, nowrap, row);
+	}
+
+	&__choice {
+		&__button {
+			padding: 10px;
+
+			border: 0;
+			border-radius: 20px;
+
+			background-color: $button-bg;
+			cursor: pointer;
+
+			transition: 0.3s ease;
+
+			&:hover {
+				background-color: color.adjust($button-bg, $lightness: 20%);
+			}
+		}
+
+		&__icon {
+			display: block;
+			width: 40px;
+			height: 40px;
+			color: $button-fg;
+		}
+	}
+
+	&__results {
+		@include flex(center, center, 16px, nowrap, column);
+	}
+
+	&__computer-choice {
+		width: 215px;
+		padding: 10px 20px;
+
+		border-radius: 20px;
+
+		background-color: $button-bg;
+		color: $button-fg;
+
+		@include typography(inherit, 400, 12px, center);
+	}
+
+	&__score {
+		@include flex(flex-start, flex-start, 4px, nowrap, column);
+
+		@include typography(inherit, 400, 12px, left);
+		line-height: 170%;
+	}
+
+	:global(.dark) & {
+		&__choice {
+			&__button {
+				background-color: $button-bg-dark;
+				color: $button-fg-dark;
+
+				&:hover {
+					background-color: $bg-alt;
+				}
+			}
+
+			&__icon {
+				color: $button-fg-dark;
+			}
+		}
+
+		&__computer-choice {
+			background-color: $button-bg-dark;
+			color: $button-fg-dark;
+		}
+	}
+}
