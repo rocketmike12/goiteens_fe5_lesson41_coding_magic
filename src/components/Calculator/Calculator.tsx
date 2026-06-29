@@ -62,7 +62,7 @@ export const Calculator = () => {
         <>
             <LineSection>
                 <Container>
-                    <h2 className={styles["calculator__title"]}>Калькулятор</h2>
+                    <h2 className={styles["calculator__title"]}>Calculator</h2>
 
                     <div className={styles["calculator__base"]}>
                         <CalculatorInput

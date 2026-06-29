@@ -1,4 +1,5 @@
-@import "../../sass/base/base.scss";
+@use "sass:color";
+@import "/src/sass/base/base.scss";
 
 .calculator {
 	&__container {
@@ -42,7 +43,7 @@
 		@include typography(inherit, 400, 12px, center);
 
 		&:hover {
-			background-color: rgb(70, 70, 70);
+			background-color: color.adjust($button-bg, $lightness: 20%);
 		}
 	}
 

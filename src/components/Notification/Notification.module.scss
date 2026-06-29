@@ -1,34 +1,50 @@
 @import "/src/sass/base/base.scss";
 
 .notification {
-	width: 230px;
+	@include typography(inherit, 400, 12px, _);
+    height: 12px;
 
-	@include typography(inherit, 400, 12px, right);
+	&--type--left {
+		@include typography(inherit, 400, 12px, left);
+	}
 
-	&--right {
+	&--type--center {
+		@include typography(inherit, 400, 12px, center);
+	}
+
+	&--type--right {
+		@include typography(inherit, 400, 12px, right);
+	}
+
+	&--type--right,
+	&--type--left {
+		width: 230px;
+	}
+
+	&--status--right {
 		color: $text-right;
 	}
 
-	&--wrong {
+	&--status--wrong {
 		color: $text-wrong;
 	}
 
-	&--neutral {
+	&--status--neutral {
 		color: $text-neutral;
 	}
 }
 
 :global(.dark) {
 	.notification {
-		&--right {
+		&--status--right {
 			color: $text-right-dark;
 		}
 
-		&--wrong {
+		&--status--wrong {
 			color: $text-wrong-dark;
 		}
 
-		&--neutral {
+		&--status--neutral {
 			color: $text-neutral-dark;
 		}
 	}

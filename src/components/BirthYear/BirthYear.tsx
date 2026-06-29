@@ -23,17 +23,19 @@ export const BirthYear = () => {
 
 	const handleSubmit = (value: string) => {
 		setIsError(!isLeap(value));
-		setMessage(isLeap(value) ? "Ви народилися у високосний рік!" : "Ви народилися не у високосний рік!");
+		setMessage(isLeap(value) ? "You were born in a leap year!" : "You were born in a regular year!");
 	};
 
 	return (
 		<LineSection>
 			<Container>
-				<h2 className={styles["birth-year-check__title"]}>Перевір в який рік ти народився</h2>
+				<h2 className={styles["birth-year-check__title"]}>Check which year you were born in</h2>
 
 				<div className={styles["birth-year-check__wrapper"]}>
 					<ButtonInput type="number" placeholder="Enter your birth year" onSubmit={handleSubmit} />
-					<Notification status={isError ? "wrong" : "right"}>{message}</Notification>
+					<Notification type="left" status={isError ? "wrong" : "right"}>
+						{message}
+					</Notification>
 				</div>
 			</Container>
 		</LineSection>

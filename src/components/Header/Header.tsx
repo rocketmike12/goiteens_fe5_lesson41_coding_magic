@@ -23,13 +23,13 @@ export const Header = function () {
 					<Logo className={styles["logo"]} />
 					<nav className={styles["header-nav"]}>
 						<a className={styles["header-nav-link"]} href="">
-							Інтерактив
+							Interactive
 						</a>
 						<a className={styles["header-nav-link"]} href="">
-							Наша команда
+							Our team
 						</a>
 						<a className={styles["header-nav-link"]} href="">
-							Контакти
+							Contacts
 						</a>
 					</nav>
 					<ul className={styles["header-settings-list"]}>
@@ -40,7 +40,7 @@ export const Header = function () {
 							</label>
 						</li>
 						<li className={styles["header-settings-list-item"]}>
-							<p className={styles["header-settings-list-text"]}>Вітаємо, User!</p>
+							<p className={styles["header-settings-list-text"]}>Welcome!</p>
 						</li>
 					</ul>
 				</Container>

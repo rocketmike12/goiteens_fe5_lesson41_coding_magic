@@ -1,0 +1,72 @@
+@import "/src/sass/base/base.scss";
+
+.guess-number {
+	padding: 36px 0;
+
+	&__wrapper {
+		@include flex(center, center, 202px, _, _);
+	}
+
+	&__desc {
+		display: block;
+		width: 100px;
+		height: 1px;
+
+		width: 230px;
+		@include typography(inherit, 400, 12px, right);
+		color: $text-right;
+
+		&.output-text-wrong {
+			color: $text-wrong;
+		}
+	}
+
+	&__title {
+		font-family: "Montserrat Alternates";
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 0.8;
+		text-align: center;
+		margin-bottom: 36px;
+	}
+
+	&__input-wrapper {
+		@include flex(center, center, _, _, _);
+		box-shadow: 3px 3px 0px 0px #00000040;
+		border-radius: 20px;
+	}
+
+	&__input {
+		border-radius: 20px 0 0 20px;
+		height: 35px;
+		width: 180px;
+		padding: 10px;
+		@include typography(inherit, 400, 12px, left);
+		background-color: $input-bg;
+		color: $input-fg;
+	}
+
+	&__button {
+		border-radius: 0 20px 20px 0;
+		height: 35px;
+		width: 35px;
+		background-color: $button-bg;
+		@include flex(center, center, _, _, _);
+
+		&__icon {
+			color: $button-fg;
+		}
+	}
+
+	position: relative;
+	&::after {
+		content: "";
+		width: 536px;
+		height: 1px;
+		background-color: $button-bg;
+		position: absolute;
+		bottom: 0;
+		transform: translateX(-50%);
+		left: 50%;
+	}
+}

@@ -1,6 +1,10 @@
 import type { ReactNode } from "react";
 
+export type NotificationStatus = "right" | "wrong" | "neutral";
+export type NotificationType = "left" | "center" | "right";
+
 export type NotificationProps = {
-	status: "right" | "wrong" | "neutral";
+	type: NotificationType;
+	status: NotificationStatus;
 	children: ReactNode;
 };

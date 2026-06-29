@@ -8,7 +8,7 @@ export const Hero = function () {
 		<>
 			<LineSection>
 				<Container>
-					<h1 className={styles["hero-title"]}>Популярні інтерактивні ігри</h1>
+					<h1 className={styles["hero-title"]}>Popular interactive games</h1>
 				</Container>
 			</LineSection>
 		</>
