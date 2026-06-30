@@ -15,8 +15,10 @@ $text-neutral-dark: #d9d9d9;
 
 $input-bg: #dddddd;
 $input-fg: #000000;
-$input-shadow: 3px 3px 0 0 #00000040;
-$input-shadow-dark: 3px 3px 0 0 #ffffff95;
+$input-shadow: 2px 2px 0 0 #00000040;
+$input-shadow-dark: 2px 2px 0 0 #000000aa;
+$input-shadow-hover: 2px 2px 0 0 #ffffff95;
+$input-shadow-hover-dark: 2px 2px 0 0 #ffffff66;
 
 $button-bg: #000000;
 $button-fg: #ffffff;

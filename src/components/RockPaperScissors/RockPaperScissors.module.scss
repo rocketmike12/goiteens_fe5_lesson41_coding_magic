@@ -39,8 +39,6 @@
 			background-color: $button-bg;
 			cursor: pointer;
 
-			transition: 0.3s ease;
-
 			&:hover {
 				background-color: color.adjust($button-bg, $lightness: 20%);
 			}
@@ -84,7 +82,7 @@
 				color: $button-fg-dark;
 
 				&:hover {
-					background-color: $bg-alt;
+					background-color: color.adjust($button-bg-dark, $blackness: 20%);
 				}
 			}
 

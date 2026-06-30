@@ -2,14 +2,25 @@
 @import "../abstracts/variables.scss";
 @import "./reset.scss";
 
+* {
+	transition-duration: 128ms;
+}
+
 body {
 	font-family: Montserrat Alternates;
 
 	color: $fg;
 	background-color: $bg;
 
-    transition: 128ms ease;
-    transition-property: background-color;
+	transition-property: background-color;
+}
+
+button,
+input {
+	transition-property: transform box-shadow;
+	&:hover {
+		transform: translateY(-4px);
+	}
 }
 
 :global(.dark) {

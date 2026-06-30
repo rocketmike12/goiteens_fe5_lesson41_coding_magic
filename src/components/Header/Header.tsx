@@ -20,7 +20,9 @@ export const Header = function () {
 		<>
 			<header className={styles["header"]}>
 				<Container>
-					<Logo className={styles["logo"]} />
+					<a href="/">
+						<Logo className={styles["logo"]} />
+					</a>
 					<nav className={styles["header-nav"]}>
 						<a className={styles["header-nav-link"]} href="">
 							Interactive

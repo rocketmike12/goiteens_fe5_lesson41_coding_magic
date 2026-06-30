@@ -4,6 +4,7 @@ import { BirthYear } from "./components/BirthYear/BirthYear";
 import { GuessNumber } from "./components/GuessNumber/GuessNumber";
 import { RockPaperScissors } from "./components/RockPaperScissors/RockPaperScissors";
 import { Calculator } from "./components/Calculator/Calculator";
+import { Footer } from "./components/Footer/Footer";
 
 export const App = function () {
 	return (
@@ -14,6 +15,7 @@ export const App = function () {
 			<GuessNumber />
 			<RockPaperScissors />
 			<Calculator />
+			<Footer />
 		</>
 	);
 };

@@ -1,0 +1,79 @@
+@import "/src/sass/base/base.scss";
+
+.footer {
+	padding: 60px;
+	background-color: white;
+	width: 100%;
+
+	& > div {
+		@include flex(center, center, _, _, _);
+	}
+
+	& a {
+		color: inherit;
+	}
+
+	.logo {
+		margin-right: 185px;
+		width: 93px;
+		height: 39px;
+	}
+
+	&__social-list {
+		width: 465px;
+		margin-right: 187px;
+
+		@include typography(inherit, 400, 12px, left);
+		line-height: 20.4px;
+	}
+
+	&__subscription {
+		&__container {
+			display: flex;
+			margin-bottom: 18px;
+		}
+
+		&__button {
+			height: 35px;
+			padding: 10px;
+			margin-left: 36px;
+
+			border-radius: 20px;
+
+			@include typography(inherit, 400, 12px, left);
+			line-height: 14.63px;
+
+			background-color: $button-bg;
+			color: $button-fg;
+
+			box-shadow: $input-shadow;
+
+			&:hover {
+				box-shadow: $input-shadow-hover;
+			}
+		}
+
+		&__text {
+			@include typography(inherit, 400, 12px, left);
+			line-height: 7.31px;
+		}
+	}
+}
+
+:global(.dark) {
+	.footer {
+		background-color: $bg-dark;
+		color: $fg-dark;
+
+		&__subscription__button {
+			background-color: $button-bg-dark;
+			color: $button-fg-dark;
+
+			box-shadow: $input-shadow-dark;
+
+			&:hover {
+				box-shadow: $input-shadow-hover-dark;
+			}
+		}
+	}
+}

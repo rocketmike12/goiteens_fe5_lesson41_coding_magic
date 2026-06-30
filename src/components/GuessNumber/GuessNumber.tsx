@@ -1,4 +1,4 @@
-import { useState, type SubmitEventHandler } from "react";
+import { useState } from "react";
 
 import { Container } from "../Container/Container";
 

@@ -8,10 +8,12 @@
 		@include flex(space-between, center, _, _, _);
 	}
 
-	.logo {
+	a:has(.logo) {
 		margin-right: 81px;
 		width: 93px;
 		height: 39px;
+
+		color: inherit;
 	}
 
 	&-nav {

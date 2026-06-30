@@ -9,19 +9,25 @@
 	border: none;
 	border-radius: 20px;
 
+	@include typography(inherit, 400, 12px, left);
 	background-color: $input-bg;
-
 	color: $input-fg;
 
 	box-shadow: $input-shadow;
 
 	outline: none;
 
-	@include typography(inherit, 400, 12px, left);
+	&:hover {
+		box-shadow: $input-shadow-hover;
+	}
 }
 
 :global(.dark) {
 	.input {
 		box-shadow: $input-shadow-dark;
+
+		&:hover {
+			box-shadow: $input-shadow-hover-dark;
+		}
 	}
 }
